@@ -1,13 +1,13 @@
 "use strict";
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected)
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   if (actual !== expected)
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const tail = function (arr) {
+const tail = function(arr) {
   let tailArray = arr;
   if (arr.length > 1) {
     tailArray.shift();
