@@ -9,7 +9,7 @@ const assertEqual = function (actual, expected) {
 
 const head = function (array) {
   if (array.length > 0) return array[0];
-  if ((array.length = 0)) return undefined;
+  if (array.length === 0) return undefined;
 };
 
 // // TEST CODE
