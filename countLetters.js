@@ -1,16 +1,16 @@
 "use strict";
 
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected)
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   if (actual !== expected)
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const countLetters = function(string) {
+const countLetters = function (string) {
   const results = {};
   // Needs to be lower case so there's only one instance of each letter
-  const lowerCase = string.toLowerCase();
+  const lowerCase = string.toLowerCase().replace(/\s/g, "");
   // These are characters we don't need
   const nonLetters = [" ", ",", ".", "?", "!", "(", ")"];
 
@@ -22,6 +22,7 @@ const countLetters = function(string) {
     }
   }
 
+  // Remove the non-letter characters
   for (const character of nonLetters) {
     delete results[character];
   }
