@@ -6,7 +6,7 @@ It should scan the object and return the first key which contains the given valu
 If no key with that given value is found, then it should return undefined.
 */
 
-const findKeyByValue = function (object, value) {
+const findKeyByValue = function(object, value) {
   //Loop over the keys in the object
   for (let key in object) {
     //If the values at the key in the object contain
@@ -15,10 +15,9 @@ const findKeyByValue = function (object, value) {
       return key;
     }
   }
-  return undefined;
 };
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected)
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   if (actual !== expected)

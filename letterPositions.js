@@ -1,6 +1,6 @@
 "use strict";
 
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const results = {};
   //Lowercase and remove all the spaces
   const lowerCase = sentence.toLowerCase().replace(/\s/g, "");
@@ -29,7 +29,7 @@ const letterPositions = function (sentence) {
   return results;
 };
 
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   // If the arrays are different lengths they're not identical
   if (array1.length !== array2.length) return false;
 
@@ -42,7 +42,7 @@ const eqArrays = function (array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅Assertion Passed: ${array1} === ${array2}`);
   } else {
@@ -51,7 +51,6 @@ const assertArraysEqual = function (array1, array2) {
 };
 
 const result1 = letterPositions("Hello");
-const result2 = letterPositions("Hello from the other siiiiiiide!");
 
 assertArraysEqual(result1["h"], [0]);
 assertArraysEqual(result1["l"], [2, 3]);

@@ -1,6 +1,6 @@
 "use strict";
 
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   // If the arrays are different lengths they're not identical
   if (array1.length !== array2.length) return false;
 
@@ -13,7 +13,7 @@ const eqArrays = function (array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅Assertion Passed: ${array1} === ${array2}`);
   } else {
@@ -22,13 +22,13 @@ const assertArraysEqual = function (array1, array2) {
 };
 
 // I built this function to automate my testing criteria
-let sequenceBuilder = function (number, iterator) {
+let sequenceBuilder = function(number, iterator) {
   let array = [];
   for (let i = 0; i < number; i += iterator) array.push(i);
   return array;
 };
 
-const middle = function (array) {
+const middle = function(array) {
   let middleArray = [];
   // If array has no middle return blank array
   if (array.length <= 2) return [];
