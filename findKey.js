@@ -73,3 +73,33 @@ const results4 = findKey(
 ); // => ""Blue Hill"
 
 assertEqual(results4, undefined);
+
+const results5 = findKey(
+  {
+    Africa: { countries: 54 },
+    Antarctica: { countries: 8 },
+    Australia: { countries: 14 },
+    Asia: { countries: 48 },
+    Europe: { countries: 44 },
+    northAmerica: { countries: 23 },
+    southAmerica: { countries: 13 },
+  },
+  (x) => x.countries > 40
+); // => ""Africa"
+
+assertEqual(results5, "Africa");
+
+const results6 = findKey(
+  {
+    Africa: { countries: 54 },
+    Antarctica: { countries: 8 },
+    Australia: { countries: 14 },
+    Asia: { countries: 48 },
+    Europe: { countries: 44 },
+    northAmerica: { countries: 23 },
+    southAmerica: { countries: 13 },
+  },
+  (x) => x.countries < 10
+); // => ""Antarctica"
+
+assertEqual(results6, "Antarctica");
