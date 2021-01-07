@@ -39,7 +39,13 @@ const without = function (source, itemsToRemove) {
   return arrayWithout;
 };
 
-console.log(without([1, 2, 3, 4], [1]));
-console.log(without([1, 2, 3, 4, 1, 1], [1, 1, 2]));
-console.log(without([1, "cat", 3, "dog", 1, 1], [1, "dog", 2]));
-console.log(without([1, "cat", 3, "dog", 1, 1], [1, "cat", 3, "dog", 1, 1]));
+const results1 = without([1, 2, 3, 4, 1, 1], [1, 1, 2]);
+const results2 = without([1, "cat", 3, "dog", 1, 1], [1, "dog", 2]);
+const results3 = without(
+  [1, "cat", 3, "dog", 1, 1],
+  [1, "cat", 3, "dog", 1, 1]
+);
+
+assertArraysEqual(results1, [3, 4]);
+assertArraysEqual(results2, ["cat", 3]);
+assertArraysEqual(results3, []);
