@@ -1,13 +1,13 @@
 "use strict";
 
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected)
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   if (actual !== expected)
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   // If the arrays are different lengths they're not identical
   if (array1.length !== array2.length) return false;
 
@@ -23,7 +23,7 @@ const eqArrays = function(array1, array2) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 
-const eqObjects = function(object1, object2) {
+const eqObjects = function (object1, object2) {
   //If the lengths of the objects' keys aren't the same they're not identical
   if (Object.keys(object1).length !== Object.keys(object2).length) return false;
   //Looping over the object keys
@@ -39,8 +39,6 @@ const eqObjects = function(object1, object2) {
 
   //Otherwise the arrays are identical
   return true;
-
-  // console.log("numKeys1: ", numKeys1, "numKeys2: ", numKeys2);
 };
 
 const ab = { a: "1", b: "2" };
