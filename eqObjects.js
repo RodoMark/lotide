@@ -1,29 +1,12 @@
 "use strict";
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected)
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  if (actual !== expected)
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
-
-const eqArrays = function(array1, array2) {
-  // If the arrays are different lengths they're not identical
-  if (array1.length !== array2.length) return false;
-
-  for (let i = 0; i < array1.length; i++) {
-    // If there's ever an inequality the whole thing is false
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const assertEqual = require("./assertEqual");
+const eqArrays = require("./eqArrays");
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 
-const eqObjects = function(object1, object2) {
+const eqObjects = function (object1, object2) {
   //If the lengths of the objects' keys aren't the same they're not identical
   if (Object.keys(object1).length !== Object.keys(object2).length) return false;
   //Looping over the object keys
@@ -41,20 +24,4 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-const abc = { a: "1", b: "2", c: "3" };
-
-assertEqual(eqObjects(ab, ba), true);
-assertEqual(eqObjects(ab, abc), false);
-
-// const cd = { c: "1", d: ["2", 3] };
-// const dc = { d: ["2", 3], c: "1" };
-// const cd2 = { c: "1", d: ["2", 3, 4] };
-
-const boy = { age: "young", sex: "male", responsibility: "few" };
-const man = { age: "mature", sex: "male", responsibility: "lots" };
-const man2 = { age: "mature", sex: "male", responsibility: "lots" };
-
-assertEqual(eqObjects(man, man2), true);
-assertEqual(eqObjects(boy, man), false);
+module.exports = eqObjects;
