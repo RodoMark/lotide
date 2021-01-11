@@ -16,7 +16,7 @@ const middle = function (array) {
     middleArray.push(Math.floor((array.length - 1) / 2));
     middleArray.push(Math.floor(array.length / 2));
     // If the array is odd push the single middle value
-  } else middleArray.push(Math.floor(array.length / 2));
+  } else middleArray.push(Math.ceil(array.length / 2));
   return middleArray;
 };
 

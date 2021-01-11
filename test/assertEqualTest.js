@@ -1,5 +1,4 @@
 const assert = require("chai").assert;
-const assertEqual = require("../assertEqual");
 
 describe("#assertEqual", () => {
   it("returns true if 1 === 1)", () => {
@@ -10,9 +9,3 @@ describe("#assertEqual", () => {
     assert.isTrue("Lighthouse Labs" === "Lighthouse Labs");
   });
 });
-
-// TEST CODE
-// assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual("Bootcamp", "Bootcamp");
-// assertEqual(1, 1);
-// assertEqual(1, 4);

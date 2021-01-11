@@ -1,12 +1,22 @@
-const assertArraysEqual = require("../assertArraysEqual");
+const assert = require("chai").assert;
 const middle = require("../middle");
 const sequenceBuilder = require("../sequenceBuilder");
+// const assertArraysEqual = require("../assertArraysEqual");
 
-// TEST CODE
-assertArraysEqual([], middle([1, 2]));
-assertArraysEqual([], middle([49, 50]));
-assertArraysEqual([2], middle([1, 2, 3, 4, 5]));
-assertArraysEqual([2, 3], middle([1, 2, 3, 4, 5, 6]));
-assertArraysEqual([3, 4], middle([1, 2, 3, 4, 5, 6, 7, 8]));
-assertArraysEqual([24, 25], middle(sequenceBuilder(50, 1)));
-assertArraysEqual([49], middle(sequenceBuilder(99, 1)));
+describe("#middle", () => {
+  it("returns [] for [1, 2]", () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+
+  it("returns [2] for [1, 2, 3]", () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+
+  it("returns [24,25] for Array [1, 2, 3, ..., 50]", () => {
+    assert.deepEqual(middle(sequenceBuilder(50, 1)), [24, 25]);
+  });
+
+  it("returns [24,25] for Array [1, 2, 3, ..., 50]", () => {
+    assert.deepEqual(middle(sequenceBuilder(99, 1)), [50]);
+  });
+});
