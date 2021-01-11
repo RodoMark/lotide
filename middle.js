@@ -4,7 +4,7 @@ const eqArrays = require("./eqArrays");
 const assertArraysEqual = require("./assertArraysEqual");
 
 // I built this function to automate my testing criteria
-const sequenceBuilder = require("./sequenceBuilder");
+const buildSequence = require("./buildSequence");
 
 const middle = function (array) {
   let middleArray = [];
