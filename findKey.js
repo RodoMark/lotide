@@ -2,7 +2,7 @@
 
 // findKey FUNCTION
 
-const findKey = function(object, callback) {
+const findKey = function (object, callback) {
   //Scan the object and return the first key for which callback returns truthy
   for (let key in object) {
     if (callback(object[key])) {
@@ -11,7 +11,7 @@ const findKey = function(object, callback) {
   }
 };
 
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected)
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   if (actual !== expected)
@@ -103,3 +103,16 @@ const results6 = findKey(
 ); // => ""Antarctica"
 
 assertEqual(results6, "Antarctica");
+
+const results = findKey(
+  {
+    Africa: 54,
+    Antarctica: 8,
+    Australia: 14,
+    Asia: 48,
+    Europe: 44,
+    northAmerica: 23,
+    southAmerica: 13,
+  },
+  (x) => x < 10
+); // => ""Antarctica"
