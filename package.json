@@ -1,0 +1,32 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "Copy of Iodine library for Lighthouse Labs",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodoMark/lotide.git"
+  },
+  "keywords": [
+    "lotide",
+    "lighthouse",
+    "labs",
+    "bootcamp"
+  ],
+  "author": "AlonCodes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RodoMark/lotide/issues"
+  },
+  "homepage": "https://github.com/RodoMark/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
