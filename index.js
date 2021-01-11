@@ -17,7 +17,7 @@ const tail = require("./tail");
 const takeUntil = require("./takeUntil");
 const without = require("./without");
 
-const lotide = {
+const _ = {
   assertArraysEqual,
   assertEqual,
   assertObjectsEqual,
@@ -38,4 +38,4 @@ const lotide = {
   without,
 };
 
-module.exports = lotide;
+module.exports = _;
