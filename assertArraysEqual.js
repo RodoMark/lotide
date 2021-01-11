@@ -1,6 +1,6 @@
 "use strict";
 
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   // If the arrays are different lengths they're not identical
   if (array1.length !== array2.length) return false;
 
@@ -13,7 +13,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function(array1, array2) {
+const assertArraysEqual = function (array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅Assertion Passed: ${array1} === ${array2}`);
   } else {
@@ -26,3 +26,5 @@ assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
 assertArraysEqual(["1", "2", "3"], ["1", "2"]); // => false
 assertArraysEqual(["1", "2", "cat"], ["1", "2", "cat"]); // => true
 assertArraysEqual(["1", "2", "cat"], ["1", 2, "cat"]); // => false
+
+module.exports = assertArraysEqual;
