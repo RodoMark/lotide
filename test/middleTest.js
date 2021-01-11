@@ -1,8 +1,8 @@
 const assert = require("chai").assert;
 const middle = require("../middle");
 const buildSequence = require("../buildSequence");
-// const assertArraysEqual = require("../assertArraysEqual");
 
+//middleTest.js
 describe("#middle", () => {
   it("returns [] for [1, 2]", () => {
     assert.deepEqual(middle([1, 2]), []);

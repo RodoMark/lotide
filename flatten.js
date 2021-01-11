@@ -1,6 +1,6 @@
 "use strict";
 
-const flatten = function(array) {
+const flatten = function (array) {
   let flattenedArray = [];
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array[i].length; j++) {

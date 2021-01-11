@@ -1,13 +1,10 @@
 "use strict";
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected)
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  if (actual !== expected)
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
+const assertEqual = require("./assertEqual");
 
-const countLetters = function(string) {
+const countLetters = function (string) {
+  if (string === "") return 0;
+
   const results = {};
   // Needs to be lower case so there's only one instance of each letter
   const lowerCase = string.toLowerCase().replace(/\s/g, "");
@@ -29,7 +26,4 @@ const countLetters = function(string) {
   return results;
 };
 
-const result1 = countLetters("Hello from the other siiiiiiide!");
-
-console.log(assertEqual(result1["h"], 3));
-console.log(assertEqual(result1["i"], 7));
+module.exports = countLetters;
