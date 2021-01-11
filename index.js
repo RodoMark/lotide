@@ -1,41 +1,41 @@
-const assertArraysEqual = "./assertArraysEqual";
-const assertEqual = "./assertEqual";
-const assertObjectsEqual = "./assertObjectsEqual";
-const buildSequence = "./buildSequence";
-const countLetters = "./countLetters";
-const countOnly = "./countOnly";
-const eqArrays = "./eqArrays";
-const eqObjects = "./eqObjects";
-const findKey = "./findKey";
-const findKeyByValue = "./findKeyByValue";
-const flatten = "./flatten";
-const head = "./head";
-const letterPositions = "./letterPositions";
-const map = "./map";
-const middle = "./middle";
-const tail = "./tail";
-const takeUntil = "./takeUntil";
-const without = "./without";
+const assertArraysEqual = require("./assertArraysEqual");
+const assertEqual = require("./assertEqual");
+const assertObjectsEqual = require("./assertObjectsEqual");
+const buildSequence = require("./buildSequence");
+const countLetters = require("./countLetters");
+const countOnly = require("./countOnly");
+const eqArrays = require("./eqArrays");
+const eqObjects = require("./eqObjects");
+const findKey = require("./findKey");
+const findKeyByValue = require("./findKeyByValue");
+const flatten = require("./flatten");
+const head = require("./head");
+const letterPositions = require("./letterPositions");
+const map = require("./map");
+const middle = require("./middle");
+const tail = require("./tail");
+const takeUntil = require("./takeUntil");
+const without = require("./without");
 
 const lotide = {
-  assertArraysEqual: "assertArraysEqual",
-  assertEqual: "assertEqual",
-  assertObjectsEqual: "assertObjectsEqual",
-  buildSequence: "buildSequence",
-  countLetters: "countLetters",
-  countOnly: "countOnly",
-  eqArrays: "eqArrays",
-  eqObjects: "eqObjects",
-  findKey: "findKey",
-  findKeyByValue: "findKeyByValue",
-  flatten: "flatten",
-  head: "head",
-  letterPositions: "letterPositions",
-  map: "map",
-  middle: "middle",
-  tail: "tail",
-  takeUntil: "takeUntil",
-  without: "without",
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  buildSequence,
+  countLetters,
+  countOnly,
+  eqArrays,
+  eqObjects,
+  findKey,
+  findKeyByValue,
+  flatten,
+  head,
+  letterPositions,
+  map,
+  middle,
+  tail,
+  takeUntil,
+  without,
 };
 
 module.exports = lotide;
