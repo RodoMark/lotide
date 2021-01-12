@@ -1,6 +1,6 @@
 {
   "name": "@alon.codes/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Copy of Iodine library for Lighthouse Labs",
   "main": "assertArraysEqual.js",
   "directories": {
