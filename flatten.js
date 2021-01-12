@@ -10,21 +10,4 @@ const flatten = function (array) {
   return flattenedArray;
 };
 
-console.log(
-  flatten([
-    [1, 2],
-    [3, 4],
-    [5, 6],
-    [7, 8],
-  ])
-);
-
-console.log(
-  flatten([
-    [1, "cat", "dog"],
-    [3, 4, "mouse", 5, 6, 77777],
-    [5, 6, "squirell", "horse"],
-    [7, 8, "mountain"],
-    ["beluga"],
-  ])
-);
+module.exports = flatten;
